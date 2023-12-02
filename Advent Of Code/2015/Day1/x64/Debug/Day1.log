@@ -1,0 +1,4 @@
+﻿  Day1.cpp
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2015\Day1\Day1.cpp(11,11): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2015\Day1\Day1.cpp(12,11): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  Day1.vcxproj -> C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2015\x64\Debug\Day1.exe

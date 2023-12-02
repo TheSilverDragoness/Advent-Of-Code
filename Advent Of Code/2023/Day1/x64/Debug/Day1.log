@@ -1,0 +1,4 @@
+﻿  Day1.cpp
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day1\Day1.cpp(31,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day1\Day1.cpp(137,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Day1.vcxproj -> C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\x64\Debug\Day1.exe
