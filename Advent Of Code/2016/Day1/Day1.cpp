@@ -1,20 +1,85 @@
-// Day1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <fstream>
+#include <string>
+
+void part1()
+{
+	std::ifstream input("input.txt");
+	std::string str;
+	int x = 0, y = 0;
+	char dir = 'u';
+
+	if (input.is_open())
+	{
+		std::getline(input, str);
+
+		for (int i = 0; i < str.length(); i++)
+		{
+			if (isalpha(str[i]))
+			{
+				if (str[i] == 'L')
+				{
+					i += 1;
+					switch (dir)
+					{
+					case 'u':
+						y -= int(str[i]);
+						dir = 'l';
+						break;
+					case 'l':
+						x -= int(str[i]);
+						dir = 'd';
+						break;
+					case 'd':
+						y += int(str[i]);
+						dir = 'r';
+						break;
+					case 'r':
+						x += int(str[i]);
+						dir = 'u';
+						break;
+					}
+				}
+				else if (str[i] == 'R')
+				{
+					i += 1;
+					switch (dir)
+					{
+					case 'u':
+						x += int(str[i]);
+						dir = 'r';
+						break;
+					case 'l':
+						y -= int(str[i]);
+						dir = 'u';
+						break;
+					case 'd':
+						x -= int(str[i]);
+						dir = 'l';
+						break;
+					case 'r':
+						y += int(str[i]);
+						dir = 'd';
+						break;
+					}
+				}
+				else
+				{
+					std::cout << "no direction specified" << std::endl;
+				}
+			}
+		}
+		std::cout << "answer: " << abs(x + y);
+	}
+}
+
+void part2()
+{
+
+}
 
 int main()
 {
-    std::cout << "Hello World! this is 2016 day 1\n";
+	part1();
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
