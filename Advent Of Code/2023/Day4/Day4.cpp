@@ -4,7 +4,6 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
-#include <numeric>
 
 void part1()
 {
@@ -70,23 +69,20 @@ void part2()
 	std::ifstream input("input.txt");
 	std::string str;
 	std::string token;
-	std::vector<int> cardcopies(216, 0);
 	std::vector<int> win;
 	std::vector<int> numbers;
+	std::vector<int> numofwins;
+	std::vector<int> cardcopies;
+	cardcopies.reserve(216);
 	bool winset = true;
 	int winnum = 0;
-
-	int curcopies = 1;
-	int curline = 0;
-
+	int cardnum = 0;
 	int total = 0;
 
 	if (input.is_open())
 	{
 		while (getline(input, str))
 		{
-			curline += 1;
-			curcopies = cardcopies[curline];
 			winnum = 0;
 			winset = true;
 			win.clear();
@@ -120,16 +116,20 @@ void part2()
 					}
 				}
 			}
-			
-			for (int a = 0; a < winnum; a++)
-			{
-				cardcopies[a] += curcopies;
-			}
-			
-			//std::cout << "number of winning numbers: " << winnum << std::endl;
 
+			numofwins.push_back(winnum);
 		}
-		total = std::accumulate(cardcopies.begin(), cardcopies.end(), 0);
+
+		for (int a = 0; a < 216; a++)
+		{
+			cardnum++;
+			cardcopies[cardnum + a] += cardcopies[cardnum] * numofwins[cardnum];
+			
+		}
+
+		for (int b = 0; b < cardcopies.size(); b++)
+			total += cardcopies[b];
+
 		std::cout << "total: " << total << std::endl;
 	}
 	input.close();
