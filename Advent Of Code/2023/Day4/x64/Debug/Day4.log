@@ -1,3 +1,3 @@
 ﻿  Day4.cpp
-C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day4\Day4.cpp(61,15): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  Day4.vcxproj -> C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\x64\Debug\Day4.exe
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day4\Day4.cpp(60,15): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+LINK : fatal error LNK1168: cannot open C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\x64\Debug\Day4.exe for writing
