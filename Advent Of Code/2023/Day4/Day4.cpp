@@ -3,7 +3,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
-#include <algorithm>
+#include <map>
 
 void part1()
 {
@@ -71,18 +71,19 @@ void part2()
 	std::string token;
 	std::vector<int> win;
 	std::vector<int> numbers;
-	std::vector<int> numofwins;
-	std::vector<int> cardcopies;
-	cardcopies.reserve(216);
+	std::map<int, int> cardtracker;
 	bool winset = true;
 	int winnum = 0;
 	int cardnum = 0;
 	int total = 0;
+	int copies = 0;
 
 	if (input.is_open())
 	{
 		while (getline(input, str))
 		{
+			cardnum++;
+			cardtracker[cardnum] = 1;
 			winnum = 0;
 			winset = true;
 			win.clear();
@@ -117,18 +118,24 @@ void part2()
 				}
 			}
 
-			numofwins.push_back(winnum);
+			copies = cardtracker.find(cardnum)->second;
+			for (int a = cardnum; a < cardnum + winnum; a++)
+			{
+				if (a < cardtracker.size())
+					cardtracker.find(a)->second += copies;
+			}
+
 		}
 
-		for (int a = 0; a < 216; a++)
+		for (int b = 0; b < cardnum; b++)
 		{
-			cardnum++;
-			cardcopies[cardnum + a] += cardcopies[cardnum] * numofwins[cardnum];
-			
+			auto it = cardtracker.find(b);
+			if (it != cardtracker.end())
+			{
+				total += cardtracker.find(b)->second;
+			}
 		}
 
-		for (int b = 0; b < cardcopies.size(); b++)
-			total += cardcopies[b];
 
 		std::cout << "total: " << total << std::endl;
 	}
