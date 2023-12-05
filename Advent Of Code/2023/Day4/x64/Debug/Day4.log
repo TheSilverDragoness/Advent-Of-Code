@@ -1,3 +1,4 @@
 ﻿  Day4.cpp
-D:\Coding Projects\Advent-Of-Code\Advent Of Code\2023\Day4\Day4.cpp(60,15): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  Day4.vcxproj -> D:\Coding Projects\Advent-Of-Code\Advent Of Code\2023\x64\Debug\Day4.exe
+D:\coding\c++\Advent-Of-Code\Advent Of Code\2023\Day4\Day4.cpp(60,15): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  LINK : D:\coding\c++\Advent-Of-Code\Advent Of Code\2023\x64\Debug\Day4.exe not found or not built by the last incremental link; performing full link
+  Day4.vcxproj -> D:\coding\c++\Advent-Of-Code\Advent Of Code\2023\x64\Debug\Day4.exe

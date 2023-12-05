@@ -155,9 +155,9 @@ void part2()
 					else if (!firstdig)
 					{
 						iss >> word;
-						std::cout << word << std::endl;
+						//std::cout << word << std::endl;
 						word.erase(std::remove_if(word.begin(), word.end(), [](auto const& c) -> bool { return !std::isalnum(c); }), word.end());
-						std::cout << word << std::endl;
+						//std::cout << word << std::endl;
 						int col;
 						it = mp.find(word);
 						if (it != mp.end())
@@ -198,7 +198,6 @@ void part2()
 
 int main()
 {
-	part2();
-	std::cout << "part1: " << 110-9 << "part2: " << 197 - 112 << std::endl;
+	part1();
 	return 0;
 }
