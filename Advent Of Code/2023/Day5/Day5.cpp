@@ -3,37 +3,43 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <cinttypes>
 
 void part1()
 {
 	std::ifstream input("input.txt");
 	std::string str;
-	std::vector<int> seeds;
+	std::vector<uint32_t> seedlist;
 	bool isseed = true;
-	
+
 	if (input.is_open())
 	{
 		while (getline(input, str)) 
 		{
 			std::istringstream iss(str);
 			std::string token;
-			
+		
 			while (iss >> token)
 			{
 				if (isdigit(token[0]) && isdigit(token.back()) && isseed)
 				{
-					seeds.push_back(stoi(token));
+					std::cout << token << std::endl;
+					seedlist.push_back(stoull(token));
+				}
+				if (token == "map:")
+				{
+
 				}
 			}
 			isseed = false;
 		}
 		std::cout << "seeds: ";
-		for (int i = 0; i < seeds.size(); i++)
+		for (int i = 0; i < seedlist.size(); i++)
 		{
-			if (i < seeds.size())
-				std::cout << seeds[i];
+			std::cout << seedlist[i] << " ";
 		}
 	}
+	input.close();
 }
 
 void part2()
@@ -45,6 +51,7 @@ void part2()
 	{
 
 	}
+	input.close();
 }
 
 int main()
