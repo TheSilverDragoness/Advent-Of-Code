@@ -1,7 +1,7 @@
 ﻿  Day5.cpp
-D:\coding\c++\Advent-Of-Code\Advent Of Code\2023\Day5\Day5.cpp(27,31): warning C4244: 'argument': conversion from 'unsigned __int64' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=uint32_t
-          ]
-  Day5.vcxproj -> D:\coding\c++\Advent-Of-Code\Advent Of Code\2023\x64\Debug\Day5.exe
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day5\Day5.cpp(51,31): warning C4244: 'argument': conversion from 'unsigned __int64' to '_Ty', possible loss of data
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day5\Day5.cpp(51,31): warning C4244:         with
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day5\Day5.cpp(51,31): warning C4244:         [
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day5\Day5.cpp(51,31): warning C4244:             _Ty=uint32_t
+C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\Day5\Day5.cpp(51,31): warning C4244:         ]
+  Day5.vcxproj -> C:\Users\The Silver Dragoness\Documents\CodeProjects\C++\AdventOfCode\AoC\Advent Of Code\2023\x64\Debug\Day5.exe
