@@ -113,13 +113,26 @@ void part1()
 					std::cout << "conversion 1" << std::endl;
 					break;
 				}
-				else if (a = vec1.size() && !(seedlist[i] < vec1[a].first + vec1[a].second - 1 && seedlist[i] > vec1[a].first))
+				else if (a == vec1.size() && (seedlist[i] >= vec1[a].first + vec1[a].second - 1 && seedlist[i] > vec1[a].first))
 				{
 					mappedlist1.push_back(seedlist[i]);
 				}
 			}
 		}
-		for (int i = 0; i < mappedlist1.size(); i++)
+		
+		std::cout << *std::min_element(mappedlist7.begin(), mappedlist7.end()) << std::endl;
+	}
+	input.close();
+}
+
+void part2()
+{
+	std::ifstream input("input.txt");
+	std::string str;
+
+	if (input.is_open())
+	{
+		/*for (int i = 0; i < mappedlist1.size(); i++)
 		{
 			for (int a = 0; a < vec2.size(); a++)
 			{
@@ -129,7 +142,7 @@ void part1()
 					std::cout << "conversion 2" << std::endl;
 					break;
 				}
-				else if (a = vec2.size() && !(mappedlist1[i] < vec2[a].first + vec2[a].second - 1 && mappedlist1[i] > vec2[a].first))
+				else if (a == vec2.size() && (mappedlist1[i] >= vec2[a].first + vec2[a].second - 1 && mappedlist1[i] > vec2[a].first))
 				{
 					mappedlist2.push_back(mappedlist1[i]);
 				}
@@ -145,7 +158,7 @@ void part1()
 					std::cout << "conversion 3" << std::endl;
 					break;
 				}
-				else if (a = vec3.size() && !(mappedlist2[i] < vec3[a].first + vec3[a].second - 1 && mappedlist2[i] > vec3[a].first))
+				else if (a == vec3.size() && (mappedlist2[i] >= vec3[a].first + vec3[a].second - 1 && mappedlist2[i] > vec3[a].first))
 				{
 					mappedlist3.push_back(mappedlist2[i]);
 				}
@@ -161,7 +174,7 @@ void part1()
 					std::cout << "conversion 4" << std::endl;
 					break;
 				}
-				else if (a = vec4.size() && !(mappedlist3[i] < vec4[a].first + vec4[a].second - 1 && mappedlist3[i] > vec4[a].first))
+				else if (a == vec4.size() && (mappedlist3[i] >= vec4[a].first + vec4[a].second - 1 && mappedlist3[i] > vec4[a].first))
 				{
 					mappedlist4.push_back(mappedlist3[i]);
 				}
@@ -177,7 +190,7 @@ void part1()
 					std::cout << "conversion 5" << std::endl;
 					break;
 				}
-				else if (a = vec5.size() && !(mappedlist4[i] < vec5[a].first + vec5[a].second - 1 && mappedlist4[i] > vec5[a].first))
+				else if (a == vec5.size() && (mappedlist4[i] >= vec5[a].first + vec5[a].second - 1 && mappedlist4[i] > vec5[a].first))
 				{
 					mappedlist5.push_back(mappedlist4[i]);
 				}
@@ -193,7 +206,7 @@ void part1()
 					std::cout << "conversion 6" << std::endl;
 					break;
 				}
-				else if (a = vec6.size() && !(mappedlist5[i] < vec6[a].first + vec6[a].second - 1 && mappedlist5[i] > vec6[a].first))
+				else if (a == vec6.size() && (mappedlist5[i] >= vec6[a].first + vec6[a].second - 1 && mappedlist5[i] > vec6[a].first))
 				{
 					mappedlist6.push_back(mappedlist5[i]);
 				}
@@ -209,25 +222,12 @@ void part1()
 					std::cout << "conversion 7" << std::endl;
 					break;
 				}
-				else if (a = vec7.size() && !(mappedlist6[i] < vec7[a].first + vec7[a].second - 1 && mappedlist6[i] > vec7[a].first))
+				else if (a == vec7.size() && (mappedlist6[i] >= vec7[a].first + vec7[a].second - 1 && mappedlist6[i] > vec7[a].first))
 				{
 					mappedlist7.push_back(mappedlist6[i]);
 				}
 			}
-		}
-		std::cout << *std::min_element(mappedlist7.begin(), mappedlist7.end()) << std::endl;
-	}
-	input.close();
-}
-
-void part2()
-{
-	std::ifstream input("input.txt");
-	std::string str;
-
-	if (input.is_open())
-	{
-
+		}*/
 	}
 	input.close();
 }
