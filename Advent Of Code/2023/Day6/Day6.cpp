@@ -2,9 +2,12 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include "timer.h"
 
 void part1()
 {
+	Timer timer;
+	timer.Reset();
 	std::vector<std::pair<int, int>> races;
 
 	races.push_back({ 59, 543 });
@@ -31,12 +34,15 @@ void part1()
 	{
 		total *= waystowin[k];
 	}
-	std::cout << total;
+	float time = timer.Elapsed();
+	std::cout << "part 1 answer: " << total << " Elapsed time (s): " << time << std::endl;
 }
 
 void part2()
 {
-	std::pair<uint32_t, uint32_t> race{ 59688274, 543102016641022 };
+	Timer timer;
+	timer.Reset();
+	std::pair<uint64_t, uint64_t> race{ 59688274, 543102016641022 };
 	uint64_t total = 0;
 	
 	for (uint32_t i = 0; i < race.first; i++)
@@ -44,12 +50,13 @@ void part2()
 		if (race.second < (race.first - i) * i)
 			total++;
 	}
-
-	std::cout << total;
+	float time = timer.Elapsed();
+	std::cout << "part 2 answer: " << total << " Elapsed time (s): " << time << std::endl;
 }
 
 int main()
 {
+	part1();
 	part2();
 	return 0;
 }
