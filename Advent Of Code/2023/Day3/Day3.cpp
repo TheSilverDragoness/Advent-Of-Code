@@ -26,7 +26,7 @@ void part1()
 				if (!isalnum(str[i]))
 				{
 					column = i;
-					std::pair<std::pair<int, int>, int>> coord;
+					std::pair<std::pair<int, int>, int> coord;
 				}
 			}
 		}
