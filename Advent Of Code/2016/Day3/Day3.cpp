@@ -58,8 +58,8 @@ void Part2()
     int validTris = 0;
     std::vector<int> triangleEdges;
 
-    std::vector<std::vector<int>> triEdgeList(1600);
-    std::vector<std::vector<int>> triTemp(3);
+    std::vector<std::vector<int>> triEdgeList;
+    std::vector<int> triMegaList;
 
     while (getline(input, str))
     {
@@ -70,21 +70,23 @@ void Part2()
 
     int counter = 0;
 
-    for (int i = 0; i < triEdgeList.size(); i += 3)
+    for (int i = 0; i < 3; i++)
     {
-        if (i + 2 < triEdgeList.size())
+        for (auto v : triEdgeList)
         {
-            for (int j = 0; j < 3; j++)
-            {
-                int a = triEdgeList[i][j];
-                int b = triEdgeList[i + 1][j];
-                int c = triEdgeList[i + 2][j];
+            triMegaList.push_back(v[i]);
+        }
+    }
 
-                if (a + b > c && a + c > b && b + c > a)
-                {
-                    validTris++;
-                }
-            }
+    for (int i = 0; i < triMegaList.size(); i += 3)
+    {
+        int a = triMegaList[i];
+        int b = triMegaList[i + 1];
+        int c = triMegaList[i + 2];
+
+        if (a + b > c && a + c > b && b + c > a)
+        {
+            validTris++;
         }
     }
     std::cout << validTris;
