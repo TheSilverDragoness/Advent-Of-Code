@@ -10,7 +10,7 @@ void Part1()
 {
     int total = 0;
     std::smatch match;
-    
+
     std::regex reg(R"(mul\((\d+)+,(\d+)+\))");
     
     while (getline(input, str))
