@@ -31,6 +31,17 @@ void Part1()
         }
         ycoord++;
     }
+
+    for (auto m : antennas)
+    {
+        //for every type of antenna, look at each pair of antennas
+        //using find the position of the antinodes
+        //check whether they are in the list of existing antinodes
+        //if no, then check whether they are within the bounds of the map
+        //if yes, then add to list
+    }
+
+    std::cout << "Number of antinodes: " << antiNodes.size();
 }
 
 void Part2()
